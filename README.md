@@ -1,10 +1,10 @@
 # sentence_completion_lm_1b
 
-### This repo provides data pipeline for measuring the performance of lm_1b model on sentence completion task
+#### This repo provides data pipeline for measuring the performance of lm_1b model on sentence completion task
 
 ### Data
 #### testing data is provided by Microsoft sentence completion
-### testing instance: testing_data.csv; testing_label: test_answer.csv
+#### testing instance: testing_data.csv; testing_label: test_answer.csv
 
 ### Model
 #### lm_1b pre-trained model: https://github.com/tensorflow/models/tree/master/research/lm_1b
@@ -25,8 +25,10 @@
 ### How to run
 1. Run _generate_testing_files.py_ to generate testing data that's ready to be fed into lm_1b model
 ```
-shell >> python generate_testing_files -h to see its input args
+python generate_testing_files -h to see its input args
+```
 For example:
+```
 python generate_testing_files --file_name testing_data.csv --count 100
 ```
 2. Run _generate_testing_labels.py_ to parse test answers and save to .npy file
