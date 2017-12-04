@@ -3,12 +3,12 @@
 #### This repo provides data pipeline for measuring the performance of lm_1b model on sentence completion task
 
 ### Data
-##### testing data is provided by Microsoft sentence completion
-##### testing instance: testing_data.csv; testing_label: test_answer.csv
+testing data is provided by Microsoft sentence completion
+testing instance: testing_data.csv; testing_label: test_answer.csv
 
 ### Model
-##### lm_1b pre-trained model: https://github.com/tensorflow/models/tree/master/research/lm_1b
-##### lm_1b paper: @article{jozefowicz2016exploring, title={Exploring the Limits of Language Modeling}, author={Jozefowicz, Rafal and Vinyals, Oriol and Schuster, Mike and Shazeer, Noam and Wu, Yonghui}, journal={arXiv preprint arXiv:1602.02410}, year={2016} }
+lm_1b pre-trained model: https://github.com/tensorflow/models/tree/master/research/lm_1b
+lm_1b paper: @article{jozefowicz2016exploring, title={Exploring the Limits of Language Modeling}, author={Jozefowicz, Rafal and Vinyals, Oriol and Schuster, Mike and Shazeer, Noam and Wu, Yonghui}, journal={arXiv preprint arXiv:1602.02410}, year={2016} }
 
 ### Pipeline Structure
 * generate_testing_files.py: Parse each sentence instance in sentence completion task into separate files labeled by its instance index and option index. For example, a sentence at index 5 with option a will be saved as "testing_data_5_1".
