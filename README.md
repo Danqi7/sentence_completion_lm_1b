@@ -8,6 +8,7 @@ testing instance: testing_data.csv; testing_label: test_answer.csv
 
 ### Model
 lm_1b pre-trained model: https://github.com/tensorflow/models/tree/master/research/lm_1b
+
 lm_1b paper: @article{jozefowicz2016exploring, title={Exploring the Limits of Language Modeling}, author={Jozefowicz, Rafal and Vinyals, Oriol and Schuster, Mike and Shazeer, Noam and Wu, Yonghui}, journal={arXiv preprint arXiv:1602.02410}, year={2016} }
 
 ### Pipeline Structure
@@ -29,7 +30,7 @@ python generate_testing_files -h to see its input args
 ```
 For example:
 ```
-python generate_testing_files --file_name testing_data.csv --count 100
+python generate_testing_files --file_name 'testing_data.csv' --count 100
 ```
 2. Run _generate_testing_labels.py_ to parse test answers and save to .npy file
 3. Run _batch_run_lm_1b.py_ to run lm_1b model on produced testing_data and save result perplexity to .npy file
